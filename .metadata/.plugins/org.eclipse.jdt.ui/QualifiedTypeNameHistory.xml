@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="pageObjects.portalHomePage"/>
     <fullyQualifiedTypeName name="cucumber.api.java.en.And"/>
     <fullyQualifiedTypeName name="cucumber.api.testng.AbstractTestNGCucumberTests"/>
@@ -29,7 +28,6 @@
     <fullyQualifiedTypeName name="payload.ReusableMethods"/>
     <fullyQualifiedTypeName name="io.restassured.filter.session.SessionFilter"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="pojo.GetCourses"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="org.junit.Assert"/>
+    <fullyQualifiedTypeName name="io.restassured.path.json.JsonPath"/>
 </qualifiedTypeNameHistroy>

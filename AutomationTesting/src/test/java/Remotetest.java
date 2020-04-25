@@ -20,6 +20,8 @@ public class Remotetest {
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("Selenium");
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys(Keys.ENTER);
+		
+		//test
 	}
 
 }
