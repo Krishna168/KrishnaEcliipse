@@ -43,11 +43,11 @@ public class StepDefinition extends Utils {
 	}
 
 	@Then("Confirm the {string} field in response should be {string}")
-	public void confirm_the_field_in_response_should_be(String ActualKeyValue, String ExpectedKeyValue) {
+	public void confirm_the_field_in_response_should_be(String ActualKey, String ExpectedKeyValue) {
 
 		String resp=response.asString();
 		JsonPath js=new JsonPath(resp);
-		assertEquals(js.getString(ActualKeyValue),ExpectedKeyValue);
+		assertEquals(js.getString(ActualKey),ExpectedKeyValue);
 		//Assert.assertEquals(ExpectedKeyValue, ActualKeyValue);--->this method is depreciated.
 
 	}
