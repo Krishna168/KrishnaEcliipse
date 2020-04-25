@@ -1,0 +1,19 @@
+# Created at 2020-03-07T10:36:20.098
+Boot Manifest-JAR contains absolute paths in classpath 'G:\KrishnaEclipseWorkspace\E2EProject\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
+# Created at 2020-03-07T10:36:21.987
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2020-03-07T10:36:21.990
+WARNING: Illegal reflective access by cucumber.deps.com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/Krishna/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar) to field java.util.TreeMap.comparator
+
+# Created at 2020-03-07T10:36:21.992
+WARNING: Please consider reporting this to the maintainers of cucumber.deps.com.thoughtworks.xstream.core.util.Fields
+
+# Created at 2020-03-07T10:36:21.993
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2020-03-07T10:36:21.994
+WARNING: All illegal access operations will be denied in a future release
+

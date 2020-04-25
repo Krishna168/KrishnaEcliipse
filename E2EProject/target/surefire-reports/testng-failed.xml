@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="Academy1.listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test parallel="tests" name="Validating title of the page(failed)">
+    <classes>
+      <class name="Academy1.ValidateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Academy1.ValidateNavigationBar -->
+      <class name="Academy1.homePage">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Academy1.homePage -->
+      <class name="Academy1.TitleValidation">
+        <methods>
+          <include name="teardown"/>
+          <include name="ValidateHeader"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Academy1.TitleValidation -->
+    </classes>
+  </test> <!-- Validating title of the page(failed) -->
+  <test parallel="tests" name="Validating the logins for the users(failed)">
+    <classes>
+      <class name="Academy1.ValidateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- Academy1.ValidateNavigationBar -->
+      <class name="Academy1.homePage">
+        <methods>
+          <include name="basePageNavigation" invocation-numbers="0 1"/>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Academy1.homePage -->
+      <class name="Academy1.TitleValidation">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Academy1.TitleValidation -->
+    </classes>
+  </test> <!-- Validating the logins for the users(failed) -->
+</suite> <!-- Failed suite [Suite] -->

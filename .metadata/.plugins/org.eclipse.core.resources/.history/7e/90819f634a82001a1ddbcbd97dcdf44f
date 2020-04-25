@@ -1,0 +1,29 @@
+package demo;
+
+import static io.restassured.RestAssured.given;
+
+import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import payload.AddPayLoad;
+
+public class SpecBuilderTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RequestSpecification res=new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123").setContentType(ContentType.JSON).build();
+		
+		
+		RequestSpecification res=given().spec(res)
+				.body(AddPayLoad.SerializablePayLoad());
+				res.when().post("/maps/api/place/add/json")
+				.then().assertThat().statusCode(200).extract().response();
+		String response=res.asString();
+		System.out.println(response);
+
+
+	}
+
+}

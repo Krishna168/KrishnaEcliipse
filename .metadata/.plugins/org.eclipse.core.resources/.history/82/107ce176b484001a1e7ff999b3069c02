@@ -1,0 +1,37 @@
+package stepDefinitions;
+
+public class StepDefinition {
+	@Given("The AddPlace Payload")
+	public void the_AddPlace_Payload() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User calls the {string} with the POST http method")
+	public void user_calls_the_with_the_POST_http_method(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("The Response should be Success with Status code should be {int}")
+	public void the_Response_should_be_Success_with_Status_code_should_be(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Confirm the {string} field in response should be {string}")
+	public void confirm_the_field_in_response_should_be(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("Confirm the {string} field in response should be {string}")
+	public void confirm_the_field_in_response_should_be(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
+
+
+
+}
