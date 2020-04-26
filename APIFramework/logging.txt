@@ -16,7 +16,7 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "Krishna",
+    "name": "Krishna1",
     "phone_number": "Frontline house",
     "address": "No.10, Wall Street, Mexico",
     "types": [
@@ -27,7 +27,7 @@ Body:
     "language": "Marathi"
 }
 HTTP/1.1 200 OK
-Date: Sat, 25 Apr 2020 16:18:24 GMT
+Date: Sun, 26 Apr 2020 06:39:59 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,10 +40,10 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "2a82ea3f7f775c7ffebf47789894e8b2",
+    "place_id": "bf7979329a7a1620e009e58ec7986d0e",
     "scope": "APP",
-    "reference": "bb82f1db5877b60ca93e588f772ad0cdbb82f1db5877b60ca93e588f772ad0cd",
-    "id": "bb82f1db5877b60ca93e588f772ad0cd"
+    "reference": "54114cd4b423103df23cf7432bc3d07854114cd4b423103df23cf7432bc3d078",
+    "id": "54114cd4b423103df23cf7432bc3d078"
 }
 Request method:	POST
 Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
@@ -63,7 +63,7 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "hari",
+    "name": "hari1",
     "phone_number": "Frontline house",
     "address": "No.55, Goodword shipping appartment,Singapore",
     "types": [
@@ -74,7 +74,7 @@ Body:
     "language": "Gujarathi"
 }
 HTTP/1.1 200 OK
-Date: Sat, 25 Apr 2020 16:18:25 GMT
+Date: Sun, 26 Apr 2020 06:40:00 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -87,8 +87,8 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "f92d3efe2e5cf46267e4de1aba995c40",
+    "place_id": "32a1fd1182f006c7982c842a5811647c",
     "scope": "APP",
-    "reference": "f2cd5bb82d28bca7822054a37e58ae7bf2cd5bb82d28bca7822054a37e58ae7b",
-    "id": "f2cd5bb82d28bca7822054a37e58ae7b"
+    "reference": "c648c781ab9cb5b9d3788191da873341c648c781ab9cb5b9d3788191da873341",
+    "id": "c648c781ab9cb5b9d3788191da873341"
 }

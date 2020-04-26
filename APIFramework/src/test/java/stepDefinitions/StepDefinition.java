@@ -12,11 +12,12 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import resources.APIResources;
 import resources.TestDataBuild;
 import resources.Utils;
 
 public class StepDefinition extends Utils {
-	  
+
 	RequestSpecification rs;
 	ResponseSpecification res;
 	Response response;
@@ -29,11 +30,22 @@ public class StepDefinition extends Utils {
 				.body(td.addPlacePayLoad(name,language,address));
 	}
 
-	@When("User calls the {string} with the POST http method")
-	public void user_calls_the_with_the_POST_http_method(String string) {
+	@When("User calls the {string} with the {string} http method")
+	public void user_calls_the_with_the_http_method(String resource, String method) {
+		
+		//Below statement will call constructor based on the resource value which you pass.
+		APIResources resourceAPI=APIResources.valueOf(resource);
+		System.out.println(resourceAPI.getResource());
+
 		res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		response=rs.when().post("/maps/api/place/add/json")
-				.then().spec(res).extract().response();
+
+		if(method.equalsIgnoreCase("POST"))
+			response=rs.when().post(resourceAPI.getResource());
+		else if(method.equalsIgnoreCase("GET"))
+			response=rs.when().get(resourceAPI.getResource());
+		else
+			response=rs.when().delete(resourceAPI.getResource());
+
 	}
 
 	@Then("The Response should be Success with Status code should be {int}")
