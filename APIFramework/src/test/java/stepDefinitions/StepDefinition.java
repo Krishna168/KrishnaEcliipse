@@ -32,7 +32,7 @@ public class StepDefinition extends Utils {
 
 	@When("User calls the {string} with the {string} http method")
 	public void user_calls_the_with_the_http_method(String resource, String method) {
-		
+
 		//Below statement will call constructor based on the resource value which you pass.
 		APIResources resourceAPI=APIResources.valueOf(resource);
 		System.out.println(resourceAPI.getResource());
@@ -57,11 +57,20 @@ public class StepDefinition extends Utils {
 	@Then("Confirm the {string} field in response should be {string}")
 	public void confirm_the_field_in_response_should_be(String ActualKey, String ExpectedKeyValue) {
 
-		String resp=response.asString();
-		JsonPath js=new JsonPath(resp);
-		assertEquals(js.getString(ActualKey),ExpectedKeyValue);
+
+		assertEquals(getJsonPath(response,ActualKey),ExpectedKeyValue);
 		//Assert.assertEquals(ExpectedKeyValue, ActualKeyValue);--->this method is depreciated.
 
+	}
+
+	@Then("verify place_Id created maps to {string} using {string}")
+	public void verify_place_Id_created_maps_to_using(String expectedName, String resource) throws IOException {
+		
+		String place_id=getJsonPath(response,"place_id");
+		rs=given().spec(requestSpecification()).queryParam("place_id",place_id);
+		user_calls_the_with_the_http_method(resource, "GET");
+		String actualName=getJsonPath(response,"name");
+		assertEquals(actualName,expectedName);
 	}
 
 
