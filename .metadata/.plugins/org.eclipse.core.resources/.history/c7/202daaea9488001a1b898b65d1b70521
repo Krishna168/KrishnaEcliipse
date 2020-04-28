@@ -15,6 +15,6 @@ Examples:
 
 Scenario: Verify if Delete functionality is working fine
 Given The Delete Place payload
-When User calls the "deletPlaceAPI" with the "POST" http method
+When User calls the "deletPlaceAPI" with the "POST" http method #post method can also be used for delete also
 Then The Response should be Success with Status code should be 200
 And Confirm the "status" field in response should be "OK" 

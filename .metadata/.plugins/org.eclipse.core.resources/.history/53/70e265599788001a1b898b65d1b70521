@@ -22,7 +22,7 @@ public class StepDefinition extends Utils {
 	ResponseSpecification res;
 	Response response;
 	TestDataBuild td=new TestDataBuild();
-	 static String place_id;
+	 String place_id;
 
 
 	@Given("The AddPlace Payload with {string} {string} {string}")

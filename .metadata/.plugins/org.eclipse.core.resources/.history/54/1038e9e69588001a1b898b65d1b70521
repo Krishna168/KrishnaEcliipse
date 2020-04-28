@@ -22,7 +22,7 @@ public class StepDefinition extends Utils {
 	ResponseSpecification res;
 	Response response;
 	TestDataBuild td=new TestDataBuild();
-	 static String place_id;
+	static String place_id;
 
 
 	@Given("The AddPlace Payload with {string} {string} {string}")
@@ -75,7 +75,7 @@ public class StepDefinition extends Utils {
 	}
 	
 	@Given("The Delete Place payload")
-	public void the_Delete_Place_payload() throws IOException {
+	public void the_Delete_Place_payload() {
 	    // Write code here that turns the phrase above into concrete actions
 		rs=given().spec(requestSpecification())
 				.body(td.deletePlacePayLoad(place_id));

@@ -30,12 +30,5 @@ public class TestDataBuild {
 		return ap;
 
 	}
-	
-	public String deletePlacePayLoad(String placeId)
-	{
-		return "{\r\n" + 
-				"    \"place_id\":\""+placeId+"\"\r\n" + 
-				"}";
-	}
 
 }

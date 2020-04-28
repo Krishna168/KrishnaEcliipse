@@ -11,7 +11,7 @@ And verify place_Id created maps to "<name>" using "getPlaceAPI"
 Examples:
 |name|language|address|
 |Krishna1|Marathi|No.10, Wall Street, Mexico|
-|hari1|Gujarathi|No.55, Goodword shipping appartment,Singapore|
+#|hari1|Gujarathi|No.55, Goodword shipping appartment,Singapore|
 
 Scenario: Verify if Delete functionality is working fine
 Given The Delete Place payload

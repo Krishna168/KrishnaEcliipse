@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="org.testng.Assert"/>
     <fullyQualifiedTypeName name="io.restassured.RestAssured"/>
-    <fullyQualifiedTypeName name="io.restassured.response.Response"/>
     <fullyQualifiedTypeName name="pojo.AddPlace"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="pojo.Location"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
     <fullyQualifiedTypeName name="library.Utility"/>
     <fullyQualifiedTypeName name="resources.APIResources"/>
+    <fullyQualifiedTypeName name="io.restassured.response.Response"/>
 </qualifiedTypeNameHistroy>

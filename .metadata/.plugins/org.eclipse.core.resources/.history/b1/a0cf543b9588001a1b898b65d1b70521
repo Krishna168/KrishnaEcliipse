@@ -21,8 +21,7 @@ public class StepDefinition extends Utils {
 	RequestSpecification rs;
 	ResponseSpecification res;
 	Response response;
-	TestDataBuild td=new TestDataBuild();
-	 static String place_id;
+	TestDataBuild td=new TestDataBuild();	
 
 
 	@Given("The AddPlace Payload with {string} {string} {string}")
@@ -67,7 +66,7 @@ public class StepDefinition extends Utils {
 	@Then("verify place_Id created maps to {string} using {string}")
 	public void verify_place_Id_created_maps_to_using(String expectedName, String resource) throws IOException {
 		
-		 place_id=getJsonPath(response,"place_id");
+		String place_id=getJsonPath(response,"place_id");
 		rs=given().spec(requestSpecification()).queryParam("place_id",place_id);
 		user_calls_the_with_the_http_method(resource, "GET");
 		String actualName=getJsonPath(response,"name");
@@ -75,10 +74,9 @@ public class StepDefinition extends Utils {
 	}
 	
 	@Given("The Delete Place payload")
-	public void the_Delete_Place_payload() throws IOException {
+	public void the_Delete_Place_payload() {
 	    // Write code here that turns the phrase above into concrete actions
-		rs=given().spec(requestSpecification())
-				.body(td.deletePlacePayLoad(place_id));
+	    
 	}
 
 
