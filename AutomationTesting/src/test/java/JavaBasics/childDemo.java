@@ -23,10 +23,10 @@ public class childDemo extends parentDemo {
 		super.getData();
 
 	}
-	/*final void getTest()//final method from parentDemo class can't be overriden here
+	//final void getTest()//final method from parentDemo class can't be overriden here
 	{
 		System.out.println("test");
-	}*/
+	}
 
 
 
