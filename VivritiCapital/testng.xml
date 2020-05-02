@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="1" name="Test">
+<suite name="Viviri Capital  Test - Plumber Service">
+  <test name="Plumber Service Test Cases">
     <classes>
-      <class name="com.crm.qa.testcases.PlumberService"/>
+      <class name="com.testcases.StarOfService"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite>
+
