@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.utils.CodeReusable;
 
 public class PlumberAddInfo extends TestBase {
 
@@ -14,9 +15,6 @@ public class PlumberAddInfo extends TestBase {
 	@FindBy(xpath = "//textarea[@data-test='step_4']")
 	WebElement optionalTextBox;
 
-	@FindBy(xpath = "//button[text()='Next']")
-	WebElement nextInPlumberAddInfoPage;
-
 	public PlumberAddInfo() {
 		PageFactory.initElements(driver, this);
 	}
@@ -24,7 +22,7 @@ public class PlumberAddInfo extends TestBase {
 	public void getplumberAdditionalInfoPage(String data) {
 		if (plumberAddInfoTitle.isDisplayed()) {
 			optionalTextBox.sendKeys(data);
-			nextInPlumberAddInfoPage.click();
+			CodeReusable.getNextButton().click();
 		}
 	}
 

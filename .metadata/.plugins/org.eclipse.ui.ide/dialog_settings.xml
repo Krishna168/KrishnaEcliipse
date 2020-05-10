@@ -7,6 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Krishna\Desktop\Cognizant-Intelligent-Test-Scripter-1.4\Engine"/>
+			<item value="C:\Users\Krishna\Downloads\cognizant-intelligent-test-scripter-1.4\Engine"/>
+			<item value="C:\Users\Krishna\Downloads\Cognizant-Intelligent-Test-Scripter-master\Engine"/>
 			<item value="G:\PageObjectModel"/>
 			<item value="D:\Automation\E2EProject"/>
 			<item value="D:\Automation\DatabaseTesting"/>

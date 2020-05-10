@@ -4,8 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import com.base.TestBase;
+import com.utils.CodeReusable;
 
 public class TimeSelection extends TestBase {
 
@@ -18,19 +18,19 @@ public class TimeSelection extends TestBase {
 	@FindBy(xpath = "//label[text()='For how long?']/following-sibling::input")
 	WebElement howLong;
 
-	@FindBy(xpath = "//button[text()='Next']")
-	WebElement nextInTimeSelectionPage;
+
 
 	public TimeSelection() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void getTimePage(String time) {
+	public void getTimePage(String howLongvalue) {
 		if (timeSelectionPageTitle.isDisplayed()) {
 			Select s = new Select(timeSelectionDropdown);
-			s.selectByVisibleText(time);
-			howLong.click();
-			nextInTimeSelectionPage.click();
+			java.util.List<WebElement> timeValues=s.getOptions();			
+			s.selectByVisibleText(timeValues.get(1).getText());			
+			howLong.sendKeys(howLongvalue);
+			CodeReusable.getNextButton().click();
 		}
 	}
 

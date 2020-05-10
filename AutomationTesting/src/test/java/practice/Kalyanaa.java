@@ -1,9 +1,13 @@
 package practice;
 
+import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
@@ -18,12 +22,12 @@ public class Kalyanaa {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "G:\\KrishnaEclipseWorkspace\\drivers\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("headless");
+		//options.addArguments("headless");
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://kalyanaa.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("(//a[@class='big-font-top-menu'])[3]")).click();
+		driver.findElement(By.linkText("login")).click();
 		driver.findElement(By.id("login-username")).sendKeys("5870");
 		driver.findElement(By.id("login-password")).sendKeys("raga12345");
 		driver.findElement(By.xpath("//button[text()='Login']")).click();
@@ -35,10 +39,14 @@ public class Kalyanaa {
 		d.selectByIndex(6);
 		Select f=new Select(driver.findElement(By.id("subcaste")));
 		f.selectByVisibleText("Madhwa Desistha");
+		List<WebElement>t=f.getOptions();
+		System.out.println(f);
 		driver.findElement(By.id("qs-btn-submit")).click();
 		String text =driver.findElement(By.xpath("(//div/h3)[2]")).getText();
 		System.out.println("Madhwa Deshishta is " +text);
 		l.captureScreenshot(driver, "Madhwa Deshista");
+		
+		
 		
 		
 		

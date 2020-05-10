@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.utils.CodeReusable;
 
 public class HomePage extends TestBase {
 
@@ -15,10 +16,7 @@ public class HomePage extends TestBase {
 	@FindBy(css = ".button.button--branded.blue.go")
 	WebElement go;
 
-	@FindBy(xpath = "//button[@data-test='next_button']")
-	WebElement next;
-
-	public HomePage() {
+		public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
 
@@ -27,7 +25,8 @@ public class HomePage extends TestBase {
 		location.sendKeys(locationValue);
 		location.sendKeys(Keys.ARROW_DOWN);
 		go.click();
-		next.click();
+		CodeReusable.getNextButton().click();
+		
 	}
 
 }

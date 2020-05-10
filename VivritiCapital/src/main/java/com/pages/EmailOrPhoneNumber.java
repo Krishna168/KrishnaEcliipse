@@ -21,10 +21,6 @@ public class EmailOrPhoneNumber extends TestBase {
 	@FindBy(xpath = "//input[@placeholder='Email address']")
 	WebElement emailAddressTextBox;
 
-	/*
-	 * @FindBy(xpath = "//button[text()='Next']") WebElement nextInEmailPage;
-	 */
-
 	public EmailOrPhoneNumber() {
 		PageFactory.initElements(driver, this);
 	}

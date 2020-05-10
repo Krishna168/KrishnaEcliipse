@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.utils.CodeReusable;
 
 public class ProblemItem extends TestBase {
 
@@ -14,10 +15,6 @@ public class ProblemItem extends TestBase {
 	@FindBy(xpath = "//div[text()='Tap']/parent::label/div/div")
 	WebElement tap;
 
-	@FindBy(xpath = "//button[@data-test='next_button']")
-	WebElement nextOnProblemsPage;
-
-	
 	public ProblemItem() {
 		PageFactory.initElements(driver, this);
 	}
@@ -25,7 +22,7 @@ public class ProblemItem extends TestBase {
 	public void getproblemsFacingItems() {
 		if (problemItemsPageTitle.isDisplayed()) {
 			tap.click();
-			nextOnProblemsPage.click();
+			CodeReusable.getNextButton().click();
 		}
 
 	}

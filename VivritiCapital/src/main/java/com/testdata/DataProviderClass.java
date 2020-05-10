@@ -8,7 +8,7 @@ public class DataProviderClass {
 	@DataProvider(name="GetData")
 	public static Object[][] dataProviderMethod()
 	{
-		return new Object[][] {{"Chennai","Sample Text","18:00"}};
+		return new Object[][] {{"Chennai","Sample Text","5"}};
 		
 	}
 

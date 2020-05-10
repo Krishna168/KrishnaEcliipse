@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
@@ -34,10 +35,10 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "G:\\KrishnaEclipseWorkspace\\drivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().version("81.0.4044.138").setup();
 			driver = new ChromeDriver();
 		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", "G:\\KrishnaEclipseWorkspace\\drivers\\geckodriver.exe");
+			WebDriverManager.firefoxdriver().version("0.26.0").setup();
 			driver = new FirefoxDriver();
 		}
 
@@ -45,7 +46,6 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
 		driver.get(prop.getProperty("url"));
 
 	}

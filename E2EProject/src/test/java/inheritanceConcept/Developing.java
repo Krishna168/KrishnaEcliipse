@@ -5,14 +5,15 @@ public class Developing implements BankingClient,DomainClient {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Developing d=new Developing();
-		// Return type for d is Developing, hence it can be able access the developing methods and BankingClient interface methods.
+		// Return type for d is Developing, hence it can be able access the developing methods and BankingClient interface as well as DomainClient interface methods.
 		d.checkBalance();
 		d.payCreditCard();
 		d.transferAmount();
 		d.login();
-		//d.investments();
+		d.investments();
 		
-		//But here the return type for dr is BankingClient, hence it access only the ankingClient methods. 
+		
+		//But here the return type for dr is BankingClient, hence it access only the BankingClient methods. 
 		BankingClient dr=new Developing();
 	//eg: dr.login(); - This is not possible in the dr object.
 		dr.checkBalance();
@@ -20,8 +21,10 @@ public class Developing implements BankingClient,DomainClient {
 		dr.transferAmount();
 		
 		
+		
 		DomainClient ds=new Developing();
 		ds.investments();
+		
 		
 
 	}
