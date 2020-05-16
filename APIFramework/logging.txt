@@ -1,5 +1,5 @@
 Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Request URI:	http://216.10.245.166/maps/api/place/add/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
@@ -16,9 +16,9 @@ Body:
         "lng": 33.427362
     },
     "accuracy": 50,
-    "name": "Krishna1",
+    "name": "Twinkle",
     "phone_number": "Frontline house",
-    "address": "No.10, Wall Street, Mexico",
+    "address": "No.101, Wall Street, Mexico",
     "types": [
         "shoe park",
         "shop"
@@ -27,30 +27,30 @@ Body:
     "language": "Marathi"
 }
 HTTP/1.1 200 OK
-Date: Mon, 27 Apr 2020 14:57:17 GMT
-Server: Apache/2.4.18 (Ubuntu)
+Date: Sat, 16 May 2020 16:48:01 GMT
+Server: Apache
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
+Transfer-Encoding: chunked
 Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "bc41fe4b08032088f053d40de3c35ea0",
+    "place_id": "16fc76aaee158f9b84c81d89511dc0cd",
     "scope": "APP",
-    "reference": "e13edef5243ee5efddefb12d57fbd34ee13edef5243ee5efddefb12d57fbd34e",
-    "id": "e13edef5243ee5efddefb12d57fbd34e"
+    "reference": "cc14d1d83420fe2467b9bc354d00c1dacc14d1d83420fe2467b9bc354d00c1da",
+    "id": "cc14d1d83420fe2467b9bc354d00c1da"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=bc41fe4b08032088f053d40de3c35ea0
+Request URI:	http://216.10.245.166/maps/api/place/get/json?key=qaclick123&place_id=16fc76aaee158f9b84c81d89511dc0cd
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=bc41fe4b08032088f053d40de3c35ea0
+				place_id=16fc76aaee158f9b84c81d89511dc0cd
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,15 +59,15 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Mon, 27 Apr 2020 14:57:18 GMT
-Server: Apache/2.4.18 (Ubuntu)
+Date: Sat, 16 May 2020 16:48:02 GMT
+Server: Apache
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 246
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
+Transfer-Encoding: chunked
 Content-Type: application/json;charset=UTF-8
 
 {
@@ -76,15 +76,15 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "33.427362"
     },
     "accuracy": "50",
-    "name": "Krishna1",
+    "name": "Twinkle",
     "phone_number": "Frontline house",
-    "address": "No.10, Wall Street, Mexico",
+    "address": "No.101, Wall Street, Mexico",
     "types": "shoe park,shop",
     "website": "http://google.com",
     "language": "Marathi"
 }
 Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Request URI:	http://216.10.245.166/maps/api/place/delete/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
@@ -96,103 +96,18 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "location": {
-        "lat": -38.383494,
-        "lng": 33.427362
-    },
-    "accuracy": 50,
-    "name": "hari1",
-    "phone_number": "Frontline house",
-    "address": "No.55, Goodword shipping appartment,Singapore",
-    "types": [
-        "shoe park",
-        "shop"
-    ],
-    "website": "http://google.com",
-    "language": "Gujarathi"
+    "place_id": "16fc76aaee158f9b84c81d89511dc0cd"
 }
 HTTP/1.1 200 OK
-Date: Mon, 27 Apr 2020 14:57:19 GMT
-Server: Apache/2.4.18 (Ubuntu)
+Date: Sat, 16 May 2020 16:48:02 GMT
+Server: Apache
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 194
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK",
-    "place_id": "4a7924019f6b3719cb6a4c528240936b",
-    "scope": "APP",
-    "reference": "8e44661c6eae5d25cf74e8893cf5a5008e44661c6eae5d25cf74e8893cf5a500",
-    "id": "8e44661c6eae5d25cf74e8893cf5a500"
-}
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=4a7924019f6b3719cb6a4c528240936b
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-				place_id=4a7924019f6b3719cb6a4c528240936b
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:			<none>
-HTTP/1.1 200 OK
-Date: Mon, 27 Apr 2020 14:57:19 GMT
-Server: Apache/2.4.18 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 264
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "location": {
-        "latitude": "-38.383494",
-        "longitude": "33.427362"
-    },
-    "accuracy": "50",
-    "name": "hari1",
-    "phone_number": "Frontline house",
-    "address": "No.55, Goodword shipping appartment,Singapore",
-    "types": "shoe park,shop",
-    "website": "http://google.com",
-    "language": "Gujarathi"
-}
-Request method:	POST
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json; charset=UTF-8
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "4a7924019f6b3719cb6a4c528240936b"
-}
-HTTP/1.1 200 OK
-Date: Mon, 27 Apr 2020 14:57:19 GMT
-Server: Apache/2.4.18 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
+Transfer-Encoding: chunked
 Content-Type: application/json;charset=UTF-8
 
 {

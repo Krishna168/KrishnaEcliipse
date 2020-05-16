@@ -9,12 +9,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ActionsDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver",
-				"G:\\KrishnaEclipseWorkspace\\drivers\\chromedriver.exe");
+		
+		WebDriverManager.chromedriver().version("81.0.4044.138").setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
@@ -29,6 +30,7 @@ public class ActionsDemo {
 		a.moveToElement(driver.findElement(By.cssSelector("#twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
 		//drag and drop to be discussed in the frames concept.
 		System.out.println("Successful");
+		driver.close();
 		
 		
 		

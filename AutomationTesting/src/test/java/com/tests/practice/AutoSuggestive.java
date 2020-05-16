@@ -6,13 +6,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class AutoSuggestive {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Krishna\\eclipse-workspace\\drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().version("81.0.4044.138").setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://www.ksrtc.in/");
 		driver.findElement(By.xpath("//input[@id='fromPlaceName']")).sendKeys("BENG");

@@ -24,7 +24,7 @@ public class Utils {
 		if(req==null)
 		{
 		PrintStream log= new PrintStream(new File("logging.txt"));
-		req=new RequestSpecBuilder().setBaseUri(globalValue("baseUrl")).addQueryParam("key", "qaclick123")
+		req=new RequestSpecBuilder().setBaseUri(globalValue("baseUrl1")).addQueryParam("key", "qaclick123")
 				.addFilter(RequestLoggingFilter.logRequestTo(log))//for logging the request
 				.addFilter(ResponseLoggingFilter.logResponseTo(log))//for logging the response
 				.setContentType(ContentType.JSON).build();

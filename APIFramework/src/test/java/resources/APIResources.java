@@ -3,7 +3,7 @@ package resources;
 public enum APIResources {
 
 	AddPlaceAPI("/maps/api/place/add/json"),
-	deletPlaceAPI("/maps/api/place/delete/json"),
+	deletePlaceAPI("/maps/api/place/delete/json"),
 	getPlaceAPI("/maps/api/place/get/json");
 	private String resource;
 
