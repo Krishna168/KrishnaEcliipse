@@ -8,15 +8,25 @@ import static io.restassured.RestAssured.*;
 
 import java.util.HashMap;
 
+import org.json.JSONObject;
+
 public class DataExcelDriven {
 
 	public static void main(String[] args) {
 		
-		HashMap<String, Object> map= new HashMap<String, Object>();
+		HashMap<String, String> map= new HashMap<String, String>();
 		map.put("name", "acd");
 		map.put("isbn", "benk");
 		map.put("aisle", "4125");
 		map.put("author", "krrish");
+		JSONObject json = new JSONObject(map);
+		
+		/* For nested json, the hashmap should be as below
+		 * HashMap<String, Object> map2= new HashMap<String, Object>(); 
+		 * map2.put("lat","-36.25369"); 
+		 * map2.put("lng", "25.01256"); 
+		 * map.put("location", map2);
+		 */
 		
 
 		RestAssured.baseURI = "http://216.10.245.166";

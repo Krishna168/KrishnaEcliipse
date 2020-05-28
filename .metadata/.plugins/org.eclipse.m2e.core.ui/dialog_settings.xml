@@ -37,19 +37,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="Automation.Cucumber"/>
-			<item value="Demo.VivritiCapital"/>
-			<item value="BDD.APIFramework"/>
 		</list>
 		<list key="groupId">
-			<item value="Automation"/>
-			<item value="Demo"/>
-			<item value="BDD"/>
 		</list>
 		<list key="artifactId">
-			<item value="Cucumber"/>
-			<item value="VivritiCapital"/>
-			<item value="APIFramework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -65,10 +56,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="Framework"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="APIExcelDriven"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
