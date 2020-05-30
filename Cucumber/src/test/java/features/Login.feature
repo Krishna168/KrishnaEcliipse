@@ -1,7 +1,46 @@
 Feature: Application Login
 
-Scenario: HomePage displayed on default logging in
+Background: Open the browser and navigate to Application URL
+Given Chrome Browser should be opened
+When Navigate to the Application URl
+Then Check the Application URL by verifying its title
+
+@SanityTest
+Scenario: HomePage displayed on default logging in for normal user
 Given The user is on the Netbanking landing page
-When The user logs into the application with username and password
+When The user logs into the application with "Krish" and "234"
 Then HomePage should be displayed
-And The user should be able to see all the cards
+And Cards displayed are "true"
+
+@SmokeTest
+Scenario: HomePage displayed on default logging in for restricted user
+Given The user is on the Netbanking landing page
+When The user logs into the application with "hari" and "1256"
+Then HomePage should be displayed
+And Cards displayed are "false"
+
+
+
+@RegTest
+Scenario: HomePage displayed on default logging in for signup details
+Given The user is on the Netbanking landing page
+When The user signs up with the following details
+|krishna|prasath|11-02-1999|abc@gmail.com|587596|
+Then HomePage should be displayed
+And Cards displayed are "false"
+
+@RegTest
+Scenario Outline: HomePage displayed on default logging in for multiple users by parameterization
+Given The user is on the Netbanking landing page
+When The user log into the application with <username> and <password>
+Then HomePage should be displayed
+And Cards displayed are "true"
+
+Examples:
+|username|password|
+|user1|pass1|
+|user2|pass2|
+|user|pass3|
+|user4|pass5|
+
+

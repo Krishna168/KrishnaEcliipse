@@ -1,6 +1,8 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
+import java.util.List;
+
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,19 +14,52 @@ public class StepDefinition {
 		System.out.println("Navigated to login page");
 	}
 
-	@When("^The user logs into the application with username and password$")
-	public void the_user_logs_into_the_application_with_username_and_password() throws Throwable {
-		System.out.println("Entered username and password");
+	@Given("The user logs into the application with {string} and {string}")
+	public void the_user_logs_into_the_application_with_and(String username, String password) {
+		// Write code here that turns the phrase above into concrete actions
+		System.out.println("The user logs into the application with username is " + username);
+		System.out.println("The user logs into the application with password is " + password);
 	}
 
-	@Then("^HomePage should be displayed$")
+	@Given("^HomePage should be displayed$")
 	public void homepage_should_be_displayed() throws Throwable {
 		System.out.println("HomePage is displayed");
 	}
 
-	@And("^The user should be able to see all the cards$")
-	public void the_user_should_be_able_to_see_all_the_cards() throws Throwable {
-		System.out.println("All Cards are displayed");
+	@Given("Cards displayed are {string}")
+	public void cards_displayed_are(String string) {
+		System.out.println(string);
 	}
+	
+	 @Given("^The user signs up with the following details$")
+	    public void the_user_signs_up_with_the_following_details(DataTable data) throws Throwable {
+		List<List<String>> obj= data.asLists();
+		System.out.println(obj.get(0).get(0));
+		System.out.println(obj.get(0).get(1));
+		System.out.println(obj.get(0).get(2));
+		System.out.println(obj.get(0).get(3));
+		System.out.println(obj.get(0).get(4));
+	     
+	    }
+	 @Given("^The user log into the application with (.+) and (.+)$")
+	    public void the_user_log_into_the_application_with_and(String username, String password) throws Throwable {
+	        System.out.println(username);
+	        System.out.println(password);
+	    }
+	   @Given("^Chrome Browser should be opened$")
+	    public void chrome_browser_should_be_opened() throws Throwable {
+	        System.out.println("Chrome Browser is launched");
+	    }
+
+	    @When("^Navigate to the Application URl$")
+	    public void navigate_to_the_application_url() throws Throwable {
+	    	System.out.println("Navigated to the Application URL");
+	    }
+
+	    @Then("^Check the Application URL by verifying its title$")
+	    public void check_the_application_url_by_verifying_its_title() throws Throwable {
+	    	System.out.println("Verified the app URL by its title");
+	    }
+
 
 }
