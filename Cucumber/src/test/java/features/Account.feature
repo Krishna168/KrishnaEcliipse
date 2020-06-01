@@ -1,18 +1,54 @@
-Feature: Application Login
+Feature: Portal Login
 
-@RegTest
+
+Background: Open the browser and navigate to Application URL
+Given Chrome Browser should be opened
+When Navigate to the Application URl
+Then Check the Application URL by verifying its title
+
+@PortalTest
 Scenario: HomePage displayed on default logging in for normal user
 Given The user is on the Netbanking landing page
-When The user logs into the application with "vkkf" and "2352654"
+When The user logs into the application with "Krish" and "234"
 Then HomePage should be displayed
 And Cards displayed are "true"
 
-@SanityTest
+@PortalTest
+Scenario: HomePage displayed on default logging in for restricted user
+Given The user is on the Netbanking landing page
+When The user logs into the application with "hari" and "1256"
+Then HomePage should be displayed
+And Cards displayed are "false"
+
+@PortalTest
+Scenario: HomePage displayed on default logging in for restricted user
+Given The user is on the Netbanking landing page
+When The user logs into the application with "kgiflfg" and "41268"
+Then HomePage should be displayed
+And Cards displayed are "false"
+
+
+
+@PortalTest
 Scenario: HomePage displayed on default logging in for signup details
 Given The user is on the Netbanking landing page
 When The user signs up with the following details
-|kris22hna|prasa22th|12-02-1999|ab256c@gmail.com|582567596|
+|krishna|prasath|11-02-1999|abc@gmail.com|587596|
 Then HomePage should be displayed
 And Cards displayed are "false"
+
+@PortalTest
+Scenario Outline: HomePage displayed on default logging in for multiple users by parameterization
+Given The user is on the Netbanking landing page
+When The user log into the application with <username> and <password>
+Then HomePage should be displayed
+And Cards displayed are "true"
+
+Examples:
+|username|password|
+|user1|pass1|
+|user2|pass2|
+|user3|pass3|
+|user4|pass4|
 
 
