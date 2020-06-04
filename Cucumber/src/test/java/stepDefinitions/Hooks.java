@@ -1,9 +1,13 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebDriver;
+
+import Automation.Cucumber.Base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-public class Hooks {
+public class Hooks extends Base {
+	
 	
 	@Before("@MobileTest")
 	public void beforeValidation()
@@ -25,6 +29,12 @@ public class Hooks {
 	public void AfterWebValidation()
 	{
 		System.out.println("Hooks After Web test");
+	}
+	@After("@VegTest")
+	public void AfterVegTest() throws InterruptedException
+	{
+		
+		driver.close();
 	}
 
 }

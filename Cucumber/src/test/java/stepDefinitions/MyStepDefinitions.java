@@ -1,58 +1,56 @@
 package stepDefinitions;
 
-
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import Automation.Cucumber.Base;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import pageObjects.CartPage;
+import pageObjects.CheckOutPage;
+import pageObjects.HomePage;
 
 public class MyStepDefinitions {
-	WebDriver driver;
+	public WebDriver driver;
+	public HomePage h;
+	public CartPage c;
+	public CheckOutPage co;
 
-    @Given("^The user is on GreenKart Landing Page$")
-    public void the_user_is_on_greenkart_landing_page() throws Throwable {
-       System.setProperty("webdriver.chrome.driver", "G:\\KrishnaEclipseWorkspace\\drivers\\chromedriver.exe");
-       driver=new ChromeDriver();
-       driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
-       driver.manage().window().maximize();
-       
-    }
+	@Given("^The user is on GreenKart Landing Page$")
+	public void the_user_is_on_greenkart_landing_page() throws Throwable {
+		driver = Base.getDriver();
 
-    @When("^The user searches for \"([^\"]*)\" vegetable$")
-    public void the_user_searches_for_something_vegetable(String VegName) throws Throwable {
-    	driver.findElement(By.cssSelector("input.search-keyword")).sendKeys(VegName);
-    	Thread.sleep(3000);
-        
-    }
+	}
 
-    @Then("^Validate the \"([^\"]*)\" search results are displayed$")
-    public void validate_the_something_search_results_are_displayed(String VegName) throws Throwable {
-        Assert.assertTrue(driver.findElement(By.cssSelector("h4.product-name")).getText().contains(VegName));
-    }
-    @Then("^Verify selected \"([^\"]*)\" items are displayed in the checkout page$")
-    public void verify_selected_something_items_are_displayed_in_the_checkout_page(String VegName) throws Throwable {
-        Assert.assertTrue(driver.findElement(By.xpath("//table/tr[2]/td[2]/p")).getText().contains(VegName));
-    }
+	@When("^The user searches for (.+) vegetable$")
+	public void the_user_searches_for_something_vegetable(String VegName) throws Throwable {
+		h = new HomePage(driver);
+		h.getSearch().sendKeys(VegName);
+		Thread.sleep(3000);
 
-    @And("^User adding the item to the cart$")
-    public void user_adding_the_item_to_the_cart() throws Throwable {
-        driver.findElement(By.cssSelector("a.increment")).click();
-        driver.findElement(By.xpath("//button[text()='ADD TO CART']")).click();
-    }
+	}
 
-    @And("^User proceeded to the checkout page for purchase$")
-    public void user_proceeded_to_the_checkout_page_for_purchase() throws Throwable {
-       driver.findElement(By.xpath("//img[@alt='Cart']")).click();
-       driver.findElement(By.xpath("//button[text()='PROCEED TO CHECKOUT']")).click();
-       Thread.sleep(5000);
-    }
-    
-    
+	@Then("^Validate the (.+) search results are displayed$")
+	public void validate_the_something_search_results_are_displayed(String VegName) throws Throwable {
+
+		
+		Assert.assertTrue(h.getproductSearchResults().getText().contains(VegName));
+
+	}
+
+	@And("^User adding the item to the cart$")
+	public void user_adding_the_item_to_the_cart() throws Throwable {
+		h.getIncrement().click();
+		h.getaddToCart().click();
+	}
+
+	@And("^User proceeded to the checkout page for purchase$")
+	public void user_proceeded_to_the_checkout_page_for_purchase() throws Throwable {
+		h.getCartBag().click();
+		c = new CartPage(driver);
+		c.getProceedToCheckout().click();
+		Thread.sleep(5000);
+	}
 
 }

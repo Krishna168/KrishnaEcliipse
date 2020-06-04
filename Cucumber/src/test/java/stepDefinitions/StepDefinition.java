@@ -2,12 +2,20 @@ package stepDefinitions;
 
 import java.util.List;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Automation.Cucumber.Base;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.CheckOutPage;
 
-public class StepDefinition {
+public class StepDefinition extends Base {
+	//public WebDriver driver;
+	public CheckOutPage co;
 
 	@Given("^The user is on the Netbanking landing page$")
 	public void the_user_is_on_the_netbanking_landing_page() throws Throwable {
@@ -60,6 +68,18 @@ public class StepDefinition {
 	    public void check_the_application_url_by_verifying_its_title() throws Throwable {
 	    	System.out.println("Verified the app URL by its title");
 	    }
+	    
+	    @Then("^Verify selected \"([^\"]*)\" items are displayed in the checkout page$")
+		public void verify_selected_something_items_are_displayed_in_the_checkout_page(String VegName) throws Throwable {
+	    	
+		}
+	    
+	    @Then("^Verify selected (.+) items are displayed in the checkout page$")
+	    public void verify_selected_items_are_displayed_in_the_checkout_page(String VegName) throws Throwable {
+	    	co=new CheckOutPage(driver);
+			Assert.assertTrue(co.getproductAdded().getText().contains(VegName));
+	    }
+
 
 
 }
