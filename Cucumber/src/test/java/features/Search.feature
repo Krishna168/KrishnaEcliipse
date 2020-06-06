@@ -1,12 +1,12 @@
 Feature: Search and Place Order for Vegetables
 
-@VegTest
+@SmokeTest1
 Scenario: Search for items and validate the results
 Given The user is on GreenKart Landing Page
 When The user searches for Cucumber vegetable
 Then Validate the Cucumber search results are displayed
 
-@VegTest
+@RegressionTest
 Scenario Outline: Search for items and proceed to checkout page
 Given The user is on GreenKart Landing Page
 When The user searches for <Vegetables> vegetable
