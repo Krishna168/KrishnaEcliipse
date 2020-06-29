@@ -2,8 +2,10 @@ package com.tests.practice;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class calenderDemo {
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -15,6 +17,11 @@ public class calenderDemo {
 		System.out.println(c.get(Calendar.DAY_OF_WEEK));
 		System.out.println(c.get(Calendar.MINUTE));
 		System.out.println(c.get(Calendar.AM_PM));
+		System.out.println(c.get(Calendar.DAY_OF_WEEK_IN_MONTH));
+		
+		
+		
+		
 
 	}
 

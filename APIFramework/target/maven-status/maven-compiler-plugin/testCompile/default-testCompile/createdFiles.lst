@@ -1,7 +1,0 @@
-stepDefinitions\Hooks.class
-resources\Demo.class
-resources\APIResources.class
-resources\TestDataBuild.class
-resources\Utils.class
-stepDefinitions\StepDefinition.class
-cucumber\Options\TestRunner.class
