@@ -1,7 +1,6 @@
 package demo;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,7 +10,6 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
-import payload.AddPayLoad;
 import payload.ReusableMethods;
 
 public class StaticJson {

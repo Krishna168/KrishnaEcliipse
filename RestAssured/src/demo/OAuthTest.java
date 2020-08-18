@@ -1,5 +1,5 @@
 package demo;
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class OAuthTest {
 		Thread.sleep(5000);
 		String url=driver.getCurrentUrl();*/
 
-		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2FywGt4RfYshThsi8CvtcDA8BvmLsZFFznwIvR0252mAZ5K2-LEXa4-_Pb99cIh0fXJgAiIC6xtpVzD7lnchpP824&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
+		String url="https://rahulshettyacademy.com/getCourse.php?code=4%2F3AEKOfr7WBMfBWaWvmMDT4sk1obCpW1g_8_jyfynRJbcNA9RL9JeqFGvZpr6rnJu5Nr1D-UgYfv0mZytGFw0C_c&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none#";
 		String partialCode=url.split("code=")[1];
 		String code=partialCode.split("&scope")[0];
 		System.out.println("The Authorization Code is " + code);
@@ -51,10 +51,10 @@ public class OAuthTest {
 
 
 		//Step 3: Get Access to RahulShetty courses api using the Access Token generated in the step 2.
-		/*String response=given().queryParam("access_token", accessToken)
+		String response=given().queryParam("access_token", accessToken)
 		.when().log().all()
 		.get("https://rahulshettyacademy.com/getCourse.php").asString();
-		System.out.println(response);*/
+		System.out.println(response);
 
 		GetCourses gc=given().queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
 				.when()

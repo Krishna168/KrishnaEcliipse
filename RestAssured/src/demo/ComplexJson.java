@@ -1,7 +1,5 @@
 package demo;
 
-import org.testng.Assert;
-
 import io.restassured.path.json.JsonPath;
 import payload.AddPayLoad;
 
@@ -15,7 +13,7 @@ public class ComplexJson {
 		System.out.println("1. Print No of courses returned by API is " + count);
 
 		// 2.Print Purchase Amount
-		int purchaseAmount = js.getInt("dashboard.purchaseAmount");
+		int purchaseAmount = js.get("dashboard.purchaseAmount");
 		System.out.println("2. Print Purchase Amount " + purchaseAmount);
 
 		// 3. Print Title of the first course

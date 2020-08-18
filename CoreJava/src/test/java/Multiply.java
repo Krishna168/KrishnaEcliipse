@@ -22,10 +22,12 @@ public class Multiply {
 	
 	public static int multiply1(int a,int b)
 	{
+		int sum1 = 0;
 		for(int i=0;i<b;i++)
-			a++;
+			//a++;
+		sum1=sum1+a;
 		
-		return a;
+		return sum1;
 	}
 
 }

@@ -1,14 +1,16 @@
 package demo;
 
+import static io.restassured.RestAssured.given;
+
+import java.io.File;
+
+import org.testng.Assert;
+
 import io.restassured.RestAssured;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.path.json.JsonPath;
 import payload.AddPayLoad;
 import payload.ReusableMethods;
-import static io.restassured.RestAssured.*;
-import java.io.File;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class JIRA_API {
 
@@ -74,7 +76,8 @@ public class JIRA_API {
 		}
 
 
-
+//Note: log().all() or sysout the response ...both are same and  both will be used for printing response in console.
+		
 
 
 

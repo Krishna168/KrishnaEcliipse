@@ -16,6 +16,8 @@ public class HandlingHTTPCertifications {
 		//ch.acceptInsecureCerts();
 		ch.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		ch.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+		
+	
 
 		//below is our local chrome browser
 		ChromeOptions c = new ChromeOptions();
@@ -30,6 +32,8 @@ public class HandlingHTTPCertifications {
 		//passing desired capabilities from local chrome browser to chrome invoked.
 		WebDriver driver = new ChromeDriver(c);
 		driver.get("http://qaclickacademy.com/practice.php");
+		
+		
 		
 	}
 

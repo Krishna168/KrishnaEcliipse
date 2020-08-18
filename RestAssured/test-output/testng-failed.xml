@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="demo.JIRA_API">
+      <class name="demo.DynamicJson">
         <methods>
-          <include name="CreateIssue"/>
+          <include name="addBook" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- demo.JIRA_API -->
+      </class> <!-- demo.DynamicJson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

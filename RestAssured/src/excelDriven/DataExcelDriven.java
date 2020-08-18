@@ -1,14 +1,15 @@
 package excelDriven;
 
-import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-import payload.ReusableMethods;
-import static io.restassured.RestAssured.*;
+import static io.restassured.RestAssured.given;
 
 import java.util.HashMap;
 
 import org.json.JSONObject;
+
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import payload.ReusableMethods;
 
 public class DataExcelDriven {
 

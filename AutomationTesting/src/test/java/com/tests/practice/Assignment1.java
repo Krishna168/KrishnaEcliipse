@@ -15,7 +15,7 @@ public class Assignment1 {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		WebDriverManager.chromedriver().version("81.0.4044.138").setup();
+		WebDriverManager.chromedriver().version("84.0.4147.30").setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -51,6 +51,7 @@ public class Assignment1 {
 		System.out.println(driver.findElement(By.id("homeErrorMessage")).getText());
 		System.out.println("Cleartrip testcase is successful");
 		driver.close();
+	
 
 	}
 

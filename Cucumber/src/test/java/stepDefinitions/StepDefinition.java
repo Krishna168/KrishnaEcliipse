@@ -3,8 +3,6 @@ package stepDefinitions;
 import java.util.List;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 import Automation.Cucumber.Base;
 import io.cucumber.datatable.DataTable;

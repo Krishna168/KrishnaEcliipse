@@ -1,14 +1,12 @@
 package stepDefinitions;
 
-import org.openqa.selenium.WebDriver;
-
 import Automation.Cucumber.Base;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
 public class Hooks extends Base {
 
-	@Before("@MobileTest")
+	@Before("@MobileTest") 
 	public void beforeValidation() {
 		System.out.println("Hooks before mobile test");
 	}

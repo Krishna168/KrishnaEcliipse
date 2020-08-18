@@ -1,21 +1,22 @@
 package demo;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import static io.restassured.RestAssured.*;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import payload.AddPayLoad;
 import payload.ReusableMethods;
-import static org.hamcrest.Matchers.*;
 
 public class DynamicJson {
 	public String  id;
 	@Test(dataProvider="BooksData")
 	public void addBook(String isbn,String aisle)
 	{
-		RestAssured.baseURI="http://216.10.245.166/";
+		RestAssured.baseURI="https://rahulshettyacademy.com";
 		String response=given().log().all().header("Content-Type", "application/json")
 		.body(AddPayLoad.AddBook(isbn,aisle))
 		.when().post("/Library/Addbook.php")
@@ -25,7 +26,7 @@ public class DynamicJson {
 		 id=js.getString("ID");
 		System.out.println(id);
 		
-		RestAssured.baseURI="http://216.10.245.166";
+		//RestAssured.baseURI="http://216.10.245.166";
 		given().log().all().headers("Content-Type","application/json")
 		.body(AddPayLoad.DeleteBook(id))
 		.when().delete("/Library/DeleteBook.php")
@@ -36,7 +37,7 @@ public class DynamicJson {
 	@DataProvider(name="BooksData")
 	public Object[][] getData()
 	{
-		return new Object[][] {{"a123","4"},{"f456","e256"},{"tg120","bvh259"}};
+		return new Object[][] {{"abc","122"},{"bcd","152"},{"edr","8569"}};
 	}
 	
 	/*

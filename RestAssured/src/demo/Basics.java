@@ -1,14 +1,14 @@
 package demo;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
+import org.testng.Assert;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import payload.AddPayLoad;
 import payload.ReusableMethods;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
-
-import org.testng.Assert;
 
 public class Basics {
 
