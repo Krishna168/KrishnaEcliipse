@@ -4,7 +4,8 @@ public class ReverseString {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String a="java is a programming language";
+//		String a="java is a programming language";
+		String a="madam";
 		String b="";
 		for(int i=a.length()-1;i>=0;i--)
 		{

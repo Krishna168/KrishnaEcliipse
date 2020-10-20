@@ -1,4 +1,3 @@
-import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.By;
@@ -12,6 +11,7 @@ public class Remotetest {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
+	
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setBrowserName("chrome");
 		dc.setPlatform(Platform.WINDOWS);

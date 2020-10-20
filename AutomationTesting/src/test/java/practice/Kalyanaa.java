@@ -1,8 +1,6 @@
 package practice;
 
 import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;

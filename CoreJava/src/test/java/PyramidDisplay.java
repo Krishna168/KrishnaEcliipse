@@ -19,6 +19,17 @@ public class PyramidDisplay {
 			}
 			System.out.println(); //To insert new line after each outer 'for' loop 
 		}
+		for(int i=1;i<5;i++)
+		{
+			for(int j=4;j>=i;j--)
+			{
+				System.out.print("*");
+				System.out.print("\t"); //to press 'tab' after each character
+			}
+			System.out.println(); //To insert new line after each outer 'for' loop 
+
+		}
+		
 
 	}
 

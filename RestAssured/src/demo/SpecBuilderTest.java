@@ -13,7 +13,7 @@ import payload.AddPayLoad;
 public class SpecBuilderTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		RequestSpecification req=new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123").setContentType(ContentType.JSON).build();
 		ResponseSpecification res=new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 

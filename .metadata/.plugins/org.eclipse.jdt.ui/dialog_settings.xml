@@ -2,6 +2,10 @@
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.lastextjar" value="G:\Rest API\Rest assured Jars"/>
 	<item key="filters_last_used" value="filter_imports;"/>
+	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
+	<item key="TypeHierarchyViewPart.qualifiednames" value="false"/>
+	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
+	<item key="TypeHierarchyViewPart.orientation" value="3"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -44,6 +48,8 @@
 		<item key="updateTextualMatches" value="false"/>
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
 	</section>
 	<section name="SourceActionDialog.methods">
 		<item key="VisibilityModifier" value="1"/>

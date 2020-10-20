@@ -4,7 +4,7 @@ public class PrimeNumber {
 	public static void main(String[] args) {
 		// 41%i==0 ----->not prime number
 		//41%i!=0 ------>prime number		
-		System.out.println(PrimeNumber.checkPrimeNumber(30));		
+		System.out.println(PrimeNumber.checkPrimeNumber(42));		
 	}
 	
 	public static String checkPrimeNumber(int val)

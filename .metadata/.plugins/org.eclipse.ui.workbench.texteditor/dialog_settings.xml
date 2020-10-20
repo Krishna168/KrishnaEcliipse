@@ -6,13 +6,17 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="b"/>
 		<list key="findhistory">
+			<item value="s4"/>
+			<item value="s3"/>
 			<item value="windowhandles"/>
 			<item value="e"/>
 			<item value="C:\\\\Users\\\\Krishna\\\\eclipse-workspace\\\\drivers\\\\chromedriver.exe"/>
 		</list>
 		<list key="replacehistory">
+			<item value="b"/>
+			<item value="a"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -1,7 +1,5 @@
 package Academy1;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 
 //import org.apache.logging.log4j.LogManager;
@@ -9,7 +7,6 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import org.testng.annotations.Test;
 
 import pageObjects.LandingPage1;

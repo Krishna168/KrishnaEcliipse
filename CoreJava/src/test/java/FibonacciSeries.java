@@ -13,6 +13,8 @@ public class FibonacciSeries {
 		// fibonacci series using while loop
 		int a=0;
 		int b=1;
+		System.out.println(a);
+		System.out.println(b);
 		int sum=0;
 		int i=1;
 		while(i<10)
@@ -27,15 +29,17 @@ public class FibonacciSeries {
 		int c=0;
 		int d=1;
 		int sum1=0;
+		System.out.print(c);
+		System.out.print("\t");
+		System.out.print(d);
+		System.out.print("\t");
 		for(int j=1;j<16;j++)
 		{
 			sum1=c+d;
 			System.out.print(sum1);
 			System.out.print("\t");
 			c=d;
-			d=sum1;
-
-		
+			d=sum1;		
 	}
 
 }

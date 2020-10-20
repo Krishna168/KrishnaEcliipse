@@ -1,6 +1,6 @@
 package parent;
 
-public  class Demo {
+public class Demo {
 	private int a=5;
 
 	public String run() {

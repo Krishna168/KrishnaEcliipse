@@ -1,7 +1,5 @@
 package JavaBasics;
 
-import net.bytebuddy.implementation.bind.annotation.Super;
-
 public class childDemo extends parentDemo {
 	String name="text";
 	public childDemo()

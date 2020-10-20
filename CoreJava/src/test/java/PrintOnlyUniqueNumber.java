@@ -15,7 +15,14 @@ public class PrintOnlyUniqueNumber {
 			  System.out.print("\t");
 			  }
 		}
-
+		/*
+		 * String c="abcddddeeeedddffff"; String b=""; ArrayList<String> cd=new
+		 * ArrayList<String>(); for(int i=0;i<c.length();i++) { char c1 = c.charAt(i);
+		 * if(b.contains(c1)) { b=b+c1; } for(int j=0;j<b.length();j++) { char
+		 * b1=b.charAt(j); if(b.char) }
+		 * 
+		 * }
+		 */
 	}
 
 }
